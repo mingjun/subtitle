@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style>
+.container {
+	width: 100%;
+    height: 100vh;
+	margin: 0px;
+	
+	display: flex;
+	flex-direction: column;
+}
+.hidden {
+	display: none;
+}
+
+#text1, #text2 {
+	font-size: 80px;
+	
+	text-align:center;
+}
+
+#text1 {
+	color: blue;
+	flex: 2 2 auto;
+}
+
+#text2 {
+	color: red;
+	flex: 3 3 auto;
+}
+
+
+#timebar {
+	flex: 0 0 100px;
+	display: flex;
+	flex-direction: row;
+}
+
+#timebar > .side {
+	flex: 0 0 100px;
+	text-align:center;
+	padding-top: 40px;
+}
+#timebar > .center {
+	flex: 1 1 auto;
+	
+	display: flex;
+	flex-direction: row;
+}
+
+#timebar > .center > div {
+	height: 45px;
+}
+
+#markerL {
+	flex: 5000 5000 auto;
+	border-bottom: solid blue 10px;
+}
+
+#markerR {
+	flex: 5000 5000 auto;
+	border-bottom: solid gray 10px;
+}
+
+
+</style>
+
+</head>
+
+<body class="container">
+<div class="hidden" id="startTime"></div>
+
+<div id="text1"></div>
+<div id="text2"></div>
+
+<div id="timebar">
+	<div id="time" class="side"></div> 
+	<div id="bar" class="center">
+		<div id="markerL"></div>
+		<div id="markerR"></div>
+	</div> 
+	<div id="total" class="side"></div>
+</div>
+
+<script type="text/javascript" src="action.js"></script>
+</body>
+</html>

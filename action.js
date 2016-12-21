@@ -317,7 +317,6 @@ function SubtitlePlayer(subObj) {
 
 
 (function () {
-	console.log(location.search)
 	var jsonpFile = "my.srt.jsonp";
 	var arr = /\?(.+\.jsonp)/.exec(location.search);
 	if ( arr ) {
@@ -334,10 +333,10 @@ function SubtitlePlayer(subObj) {
 				else player.resume();
 			}
 
-			if (e.code === "KeyA" || e.code === "KeyF") {
+			if (e.code === "KeyB" || e.code === "KeyF") {
 				var percent = 10;
 				if (e.shiftKey) {percent = 1;}
-				if (e.code === "KeyA") {percent = - percent;}
+				if (e.code === "KeyB") {percent = - percent;}
 				
 				player.jump(percent);
 			}
